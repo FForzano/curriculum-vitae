@@ -5,6 +5,9 @@
     notitle
 ]{europasscv}
 
+\usepackage{helvet}
+\usepackage{xcolor}
+
 \usepackage[main=italian, english]{babel}
 
 \newcommand{\englishText}[1]{\foreignlanguage{english}{#1}}
@@ -27,6 +30,11 @@
 \ecvgender{Uomo}
 
 \begin{document}
+\begin{center}
+    \fontfamily{phv}\selectfont
+    \textcolor{ecvtextcolor}{\textbf{\huge CURRICULUM VITAE}}
+    \vspace{0.7cm}
+\end{center}
 \begin{europasscv}
     \ecvpersonalinfo
 
@@ -143,23 +151,27 @@
     \ecvlanguagefooter
 \end{europasscv}
 \vspace{1cm}
-\begin{itemize}
-    \item DICHIARAZIONE SOSTITUTIVA DI CERTIFICAZIONE \textbf{(art. 46 e 47 D.P.R. 445/2000)}\\
-          Il sottocritto \textbf{Federico Forzano}, ai sensi e per gli effetti degli \textbf{articoli 46} e \textbf{47} e
-          consapevole delle sanzioni penali previste dall'\textbf{articolo 76 del D.P.R. 28 dicembre 2000, n. 445} nelle ipotesi di
-          falsità in atti e dichiarazione mendace, dichiara che le informazioni riportate nel presente curriculum vitae
-          corrispondono a verità.
-          \begin{flushright}
-              \textbf{Data e firma}\vspace{0.5cm}\\
-              \rule{0.3\textwidth}{0.4pt}
-          \end{flushright}
-    \item Il sottoscritto dichiara di essere informato, ai sensi del \textbf{d.lgs. n.196/2003} e
-          del \textbf{GDPR 679/16 - \emph{Regolamento europeo sulla protezione dei dati personali}} che i dati personali raccolti saranno trattati anche
-          con strumenti informatici esclusivamente nell'ambito del procedimento per il
-          quale la presente dichiarazione viene resa e per tutti gli adempimenti connessi.
-          \begin{flushright}
-              \textbf{Data e firma}\vspace{0.5cm}\\
-              \rule{0.3\textwidth}{0.4pt}
-          \end{flushright}
-\end{itemize}
+\newpage
+\textcolor{ecvtextcolor}{
+    \begin{itemize}
+        \fontfamily{phv}\selectfont
+        \item DICHIARAZIONE SOSTITUTIVA DI CERTIFICAZIONE \textbf{(art. 46 e 47 D.P.R. 445/2000)}\\
+              Il sottocritto \textbf{Federico Forzano}, ai sensi e per gli effetti degli \textbf{articoli 46} e \textbf{47} e
+              consapevole delle sanzioni penali previste dall'\textbf{articolo 76 del D.P.R. 28 dicembre 2000, n. 445} nelle ipotesi di
+              falsità in atti e dichiarazione mendace, dichiara che le informazioni riportate nel presente curriculum vitae
+              corrispondono a verità.
+              \begin{flushright}
+                  \textbf{Data e firma}\vspace{0.5cm}\\
+                  \rule{0.3\textwidth}{0.4pt}
+              \end{flushright}
+        \item Il sottoscritto dichiara di essere informato, ai sensi del \textbf{d.lgs. n.196/2003} e
+              del \textbf{GDPR 679/16 - \emph{Regolamento europeo sulla protezione dei dati personali}} che i dati personali raccolti saranno trattati anche
+              con strumenti informatici esclusivamente nell'ambito del procedimento per il
+              quale la presente dichiarazione viene resa e per tutti gli adempimenti connessi.
+              \begin{flushright}
+                  \textbf{Data e firma}\vspace{0.5cm}\\
+                  \rule{0.3\textwidth}{0.4pt}
+              \end{flushright}
+    \end{itemize}
+}
 \end{document}
