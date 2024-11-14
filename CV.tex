@@ -7,10 +7,15 @@
 
 \usepackage{helvet}
 \usepackage{xcolor}
+\usepackage{enumitem}
 
 \usepackage[main=italian, english]{babel}
 
 \newcommand{\englishText}[1]{\foreignlanguage{english}{#1}}
+
+\newlist{freeitemize}{itemize}{1}
+\setlist[freeitemize,1]{ label={}, left=0pt, itemsep=0.2cm, partopsep=0pt,
+    parsep=0pt, topsep=0pt, listparindent=0pt, labelwidth=0pt, labelsep=0pt, before=\vspace{-0.33cm}}
 
 % \definecolor{ecvrulecolor}{}{}
 % \definecolor{ecvsectioncolor}{}{}
@@ -32,7 +37,7 @@
 \begin{document}
 \begin{center}
     \fontfamily{phv}\selectfont
-    \textcolor{ecvtextcolor}{\textbf{\huge CURRICULUM VITAE}}
+    \textcolor{ecvtextcolor}{{\huge Curriculum Vitae}}
     \vspace{0.7cm}
 \end{center}
 \begin{europasscv}
@@ -57,16 +62,17 @@
     \ecvitem{Titolo della tesi}{\emph{\englishText{Analysis of quantum
                 illumination systems}}}
     \ecvitem{Votazione}{110/110 e lode}
-    \ecvitem{Esami significativi} {\textbf{Tecniche di decisione, stima e sensing
-            distribuito} (statistica inferenziale, teorie della decisione e della stima
-        Bayesiane e non); \textbf{Ecosistemi wireless} (modulazioni con
-        memoria CPM, ricevitori a MLSE, canale wireless, segnali
-        multiportante, sistemi MIMO e tecniche di diversità); \textbf{Informazione e codici} (teoria
-        dell'informazione di Shannon, fondamenti di teoria dei codici con focus sui
-        codici a blocco lineari); \textbf{Elettronica dei sistemi wireless}
-        (architetture dei tranceiver, dispositivi a semiconduttore per
-        l'alta frequenza, amplificatori lineari ad alta frequenza e LNA,
-        mixer, VCO, PLL e amplificatori di trasmissione);
+    \ecvitem{Esami significativi} {\textbf{Tecniche di decisione, stima e
+            sensing distribuito} (statistica inferenziale, teorie della
+        decisione e della stima Bayesiane e non); \textbf{Ecosistemi
+            wireless} (modulazioni con memoria CPM, ricevitori a MLSE, canale
+        wireless, segnali multiportante, sistemi MIMO e tecniche di
+        diversità); \textbf{Informazione e codici} (teoria dell'informazione
+        di Shannon, fondamenti di teoria dei codici con focus sui codici a
+        blocco lineari); \textbf{Elettronica dei sistemi wireless}
+        (architetture dei \englishText{tranceiver}, dispositivi a
+        semiconduttore per l'alta frequenza, amplificatori lineari ad alta
+        frequenza e LNA, mixer, VCO, PLL e amplificatori di trasmissione);
         \textbf{Propagazione guidata} (propagazione elettromagnetica in
         guide metalliche, risuonatori, guide slab e fibre ottiche)}.
 
@@ -79,15 +85,17 @@
     \ecvitem{Votazione}{110/110 e lode}
     \ecvitem{Esami significativi} {\textbf{Segnali e comunicazioni} (analisi di
         Fourier per segnali tempo invarianti, sistemi LTI, modulazioni senza
-        memoria, analisi di segnali aleatori); \textbf{Sistemi wireless}
-        (sistemi di comunicazione passa-basso e passa-banda, modulazione e
-        demodulazione di segnali digitali, non idealità del canale wireless);
-        \textbf{Reti di telecomunicazione e internet} (sistemi a coda, algoritmi
-        di accesso multiplo, algoritmi di routing, fondamenti di
-        internetworking); \textbf{Sistemi elettronici analogici} (amplificatori
-        per piccoli segnali, amplificatori per grandi segnali, convertitori
-        AC/DC e raddrizzatori DC/DC, OP-AMP, oscillatori e multivibratori)}.
-
+        memoria, analisi di segnali aleatori); \textbf{Metodi statistici per
+            l'ingegneria} (calcolo combinatorio e teoria della
+        probabilità); \textbf{Sistemi wireless} (sistemi di comunicazione
+        passa-basso e passa-banda, modulazione e demodulazione di segnali
+        digitali, non idealità del canale wireless); \textbf{Reti di
+            telecomunicazione e internet} (sistemi a coda, algoritmi di accesso
+        multiplo, algoritmi di routing, fondamenti di internetworking);
+        \textbf{Sistemi elettronici analogici} (amplificatori per piccoli
+        segnali, amplificatori per grandi segnali, convertitori AC/DC e
+        raddrizzatori DC/DC, OP-AMP, oscillatori e multivibratori)}.
+    \newpage
     % Scuole superiori
     \ecvtitle{2013 - 2018}{Scuole Superiori}
     \ecvitem{Qualifica conseguita}{Diploma di Maturità Scientifica - Scienze Applicate}
@@ -107,7 +115,6 @@
         In tale contesto prendo parte alla gestione dell'azienda come socio e
         membro del CdA e mi occupo di coordinare gli aspetti tecnici e di
         sviluppo.}
-    \newpage
     % Formando PerCorsi
     \ecvtitle{03/2019 - 11/2023}{Insegnante privato}
     \ecvitem{Azienda o Ente}{Formando PerCorsi di Giovanni Govoni}
@@ -119,17 +126,40 @@
         studenti impegnando un monte orario compreso fra le 10 e le 15 ore
         settimanali.}
 
+    % Section: Altre esperienze
+    \ecvsection{Altre esperienze}
+    % Tirocinio
+    \ecvtitle{2023 - oggi}{Correlatore di tesi}
+    \ecvitem{Descrizione}{ Durante il mio dottorato di ricerca, ho avuto la
+        possibilità di affiancare alcuni studenti nei loro tirocini interni
+        all'università e di essere correlatore delle loro tesi.}
+    \ecvitem{Tesi}{\begin{freeitemize}%
+            \item A. Balotta, ``Sviluppo di esperienze didattiche per reti di
+            comunicazione,'' B.S. Thesis, Dept. Eng., Univ. Ferrara, Ferrara,
+            Italy, 2024. Supervisor: Prof.~A.\,Conti; Co-supervisor: F.\,Forzano.
+            \item A. Calò, ``Denoising di segnali EEG per interfacce
+            cervello-computer,'' B.S. Thesis, Dept. Eng., Univ. Ferrara,
+            Ferrara, Italy, 2024. Supervisor: Prof.~A.\,Conti; Co-supervisor: F.\,
+            Forzano.
+        \end{freeitemize}}
+    % Laboratori didattici
+    \ecvtitle{2024}{Laboratori didattici}
+    \ecvitem{Descrizione}{Preparazione e svolgimento di laboratori didattici per
+        l'insegnamento di \textbf{Reti di telecomunicazione e internet} dei corsi di
+        laurea in Ingegneria Elettronica e Informatica e in Informatica,
+        dell'Università degli Studi di Ferrara.}
+
     % Section: Competenze personali
     \ecvsection{Competenze tecniche\\e professionali}
     \ecvitem{Sistemi operativi}{
-        \begin{ecvitemize}
+        \begin{freeitemize}[itemsep=0pt]
             \item \textbf{Linux:} Conoscenza avanzata sia in ambito desktop che server.
             \item \textbf{Windows:} Buona conoscenza in ambito desktop.
             \item \textbf{macOS:} Buona conoscenza in ambito desktop.
-        \end{ecvitemize}
+        \end{freeitemize}
     }
     \ecvitem[0.3cm]{Linguaggi di programmazione}{
-        \begin{ecvitemize}
+        \begin{freeitemize}[itemsep=0pt]
             \item \textbf{Python:} Conoscenza avanzata per applicazioni di
             calcolo numerico (svolti progetti su varie tematiche, tra cui
             principal component analysis (PCM), continuous phase modulations
@@ -149,10 +179,10 @@
             documenti e padronanza del pacchetto TikZ per la creazione di
             immagini e grafici.
             \item \textbf{Bash:} Conoscenza intermedia.
-        \end{ecvitemize}
+        \end{freeitemize}
     }
     \ecvitem[0.3cm]{Tecnologie e strumenti digitali}{
-        \begin{ecvitemize}
+        \begin{freeitemize}[itemsep=0pt]
             \item \textbf{Git/Github/Jira:} Conoscenza avanzata per la gestione
             di progetti software e per il suo \englishText{deployment}.
             \item \textbf{KVM/QEMU:} Conoscenza avanzata.
@@ -166,7 +196,7 @@
             NAT.
             \item \textbf{FRR:} Esperienza base nella configurazione di FRR per
             il routing.
-        \end{ecvitemize}
+        \end{freeitemize}
     }
 
     \ecvsection{Competenze linguistiche}
